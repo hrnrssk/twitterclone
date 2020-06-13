@@ -1,0 +1,28 @@
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="bishlog.css">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+</head>
+<header class="header">
+  <p>Bishlog</p>
+</header>
+<h1>Bishlog一覧</h1>
+<table class="TweetTable">
+  <tr>
+    <th>ユーザー名</th>
+    <th>内容</th>
+  </tr>
+<% @bishlogs.each do |bishlog| %>
+  <tr>
+    <td><%= bishlog.user %></td>
+    <td><%= bishlog.content %></td>
+    <td><%= link_to '投稿を確認する', bishlog_path(bishlog.id) %></td>
+  </tr>
+<% end %>
+</table>
+<div class="newtoukou">
+<%= link_to '新しくブログを投稿する', new_bishlog_path %>
+</div>
+<footer class="footer">
+  <p>Copyright © 2020 SASAKI All RIGHTS RESERVED.</p>
+</footer>

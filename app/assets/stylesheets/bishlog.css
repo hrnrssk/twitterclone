@@ -1,0 +1,93 @@
+.header {
+  background-color: black;
+  height: 50px;
+  width: 1500px;
+  font-size: 2rem;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+p {
+  font-family: Times New Roman;
+  color: white;
+  position: absolute;
+  top: -25px;
+  left: 10px;  
+}
+
+body{
+  background-color: gray;
+}
+
+.TweetTable {
+  color: white;
+  border-collapse: separate;
+  border-spacing: 40px 0px;
+  position: relative;
+  top: 100px;
+  left: 480px;
+}
+
+h1 {
+  color: white;
+  position: relative;
+  top: 50px;
+  left: 600px;
+}
+
+.newtoukou {
+  color: white;
+  position: absolute;
+  top: 130px;
+  left: 600px;
+}
+
+#namae {
+  color: white;
+  position: relative;
+  top: 70px;
+  left: 645px;
+}
+
+#name {
+  position: relative;
+  top: 70px;
+  left: 570px;
+}
+
+#naiyou {
+  color: white;
+  position: relative;
+  top: 90px;
+  left: 645px;
+}
+
+#content {
+  position: relative;
+  top: 90px;
+  left: 420px;
+  width:500px
+}
+
+#toukou {
+  color: black;
+  position: relative;
+  top: 130px;
+  left: 625px;
+}
+
+.footer{
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.footer p {
+  font-size: 1rem;
+  color: white;
+  position: relative;
+  top: 10px;
+  left: 530px;
+}

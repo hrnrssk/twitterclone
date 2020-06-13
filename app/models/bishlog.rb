@@ -1,0 +1,2 @@
+class Bishlog < ApplicationRecord
+end
