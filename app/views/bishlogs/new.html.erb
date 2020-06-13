@@ -7,18 +7,38 @@
   <p>Bishlog</p>
 </header>
 <body>
-  <h1>Bishlog</h1>
-  <form action="/bishlogs" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="qbu8RFLhyCuAElg1qr7MLYDEdiEINJdEe1JLQFLr7kyWPFiHCEZKszOrvwON33s9CqGz7njGpBasOzrpYkb8/w==">
+  <h1>Bishlog作成</h1>
+  <%= form_with(model: @bishlog, local: true) do |form| %>
+    <% if @bishlog.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= @bishlog.errors.count %>件のエラーがあります。</h2>
+        <ul>
+        <% @bishlog.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
     <div class="bishlog_name">
-      <label id="namae" for="bishlog_name">ユーザー名</label><br>
-      <input id="name" type="text" name="bishlog[name]">
+      <div class="namae">
+        <%= form.label :ユーザー名 %><br/>
+      </div>
+      <div class="name">
+        <%= form.text_field :user %>
+      </div>
     </div>
-    <div class="bishlog_content">
-      <label id="naiyou" for="bishlog_content">内容</label><br>
-      <input id="content" type="text" name="bishlog[content]">
+    <div class="blog_content">
+      <div class="naiyou">
+        <%= form.label :内容 %><br/>
+      </div>
+      <div class="content">
+        <%= form.text_field :content, size: 50%>
+      </div>
     </div>
-    <input id="toukou" type="submit" name="commit" value="投稿する" data-disable-with="Create Bishlog"><br>
-  </form>
+    <div class="submit">
+      <%= form.submit %>
+    </div>
+  <% end %>
 </body>
 <footer class="footer">
   <p>Copyright © 2020 SASAKI All RIGHTS RESERVED.</p>

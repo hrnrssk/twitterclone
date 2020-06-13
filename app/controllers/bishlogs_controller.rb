@@ -6,8 +6,12 @@ class BishlogsController < ApplicationController
     @bishlog = Bishlog.new
   end
   def create
-    Bishlog.create(bishlog_params)
-    redirect_to new_bishlog_path
+    @bishlog = Bishlog.new(bishlog_params)
+    if @bishlog.save
+      redirect_to bishlogs_path, notice: "投稿しました！"
+    else
+      render :new
+    end
   end
   def show
     @bishlog = Bishlog.find(params[:id])
