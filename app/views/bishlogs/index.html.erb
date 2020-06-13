@@ -16,12 +16,13 @@
   <tr>
     <td><%= bishlog.user %></td>
     <td><%= bishlog.content %></td>
-    <td><%= link_to '投稿を確認する', bishlog_path(bishlog.id) %></td>
+    <td><%= link_to 'ツイートを確認する', bishlog_path(bishlog.id) %></td>
+    <td><%= link_to "ツイートを編集する", edit_bishlog_path(bishlog.id) %></td>
   </tr>
 <% end %>
 </table>
 <div class="newtoukou">
-<%= link_to '新しくブログを投稿する', new_bishlog_path %>
+<%= link_to '新しくツイートを投稿する', new_bishlog_path %>
 </div>
 <footer class="footer">
   <p>Copyright © 2020 SASAKI All RIGHTS RESERVED.</p>
