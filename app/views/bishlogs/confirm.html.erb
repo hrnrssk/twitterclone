@@ -5,7 +5,8 @@
   <p class="confirmuser">ユーザー名:<%= @bishlog.user %></p>
   <p class="confirmcontent">内容:<%= @bishlog.content %></p>
   <div class="confirmsubmit">
-      <%= form.submit  "登録する" %>
+    <%= form.submit  "登録する" %>
+    <%= form.submit "戻る", name: 'back' %>
   </div>
   
 <% end %>

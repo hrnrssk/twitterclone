@@ -8,7 +8,7 @@
 </header>
 <body>
   <h1 class="bishlogcreate">Bishlog作成</h1>
-  <%= form_with(model: @bishlog, local: true ,url: confirm_bishlogs_path) do |form| %>
+  <%= form_with(model: @bishlog, local: true ,url: choose_new_or_edit) do |form| %>
     <% if @bishlog.errors.any? %>
       <div id="error_explanation">
         <h2><%= @bishlog.errors.count %>件のエラーがあります。</h2>

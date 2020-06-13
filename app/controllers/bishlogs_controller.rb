@@ -8,10 +8,14 @@ class BishlogsController < ApplicationController
   end
   def create
     @bishlog = Bishlog.new(bishlog_params)
-    if @bishlog.save
-      redirect_to bishlogs_path, notice: "ツイートしました！"
-    else
+    if params[:back]
       render :new
+    else
+      if @bishlog.save
+        redirect_to bishlogs_path, notice: "ツイートを作成しました！"
+      else
+        render :new
+      end
     end
   end
   def show
