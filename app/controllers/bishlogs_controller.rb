@@ -1,4 +1,5 @@
 class BishlogsController < ApplicationController
+  before_action :set_blog, only: [:show, :edit, :update]
   def index
     @bishlogs = Bishlog.all
   end
@@ -14,13 +15,10 @@ class BishlogsController < ApplicationController
     end
   end
   def show
-    @bishlog = Bishlog.find(params[:id])
   end
   def edit
-    @bishlog = Bishlog.find(params[:id])
   end
   def update
-    @bishlog = Bishlog.find(params[:id])
     if @bishlog.update(bishlog_params)
       redirect_to bishlogs_path, notice: "ツイートを編集しました！"
     else
@@ -30,5 +28,8 @@ class BishlogsController < ApplicationController
   private
   def bishlog_params
     params.require(:bishlog).permit(:user, :content)
+  end
+  def set_blog
+    @bishlog = Bishlog.find(params[:id])
   end
 end
