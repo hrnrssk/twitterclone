@@ -1,5 +1,5 @@
 class BishlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy]
   def index
     @bishlogs = Bishlog.all
   end
@@ -24,6 +24,10 @@ class BishlogsController < ApplicationController
     else
       render :edit
     end
+  end
+  def destroy
+    @bishlog.destroy
+    redirect_to bishlogs_path, notice:"ツイートを削除しました！"
   end
   private
   def bishlog_params

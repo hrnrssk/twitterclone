@@ -16,8 +16,9 @@
   <tr>
     <td><%= bishlog.user %></td>
     <td><%= bishlog.content %></td>
-    <td><%= link_to 'ツイートを確認する', bishlog_path(bishlog.id) %></td>
+    <td><%= link_to "ツイートを確認する", bishlog_path(bishlog.id) %></td>
     <td><%= link_to "ツイートを編集する", edit_bishlog_path(bishlog.id) %></td>
+    <td><%= link_to "ツイートを削除する", bishlog_path(bishlog.id), method: :delete %></td>
   </tr>
 <% end %>
 </table>
