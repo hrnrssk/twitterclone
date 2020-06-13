@@ -6,9 +6,14 @@
 <header class="header">
   <p>Bishlog</p>
 </header>
-<h1>Bishlog確認画面</h1>
-<p id="detailuser" >ユーザー名: <%= @bishlog.user %></p>
-<p id="detailcontent" >内容: <%= @bishlog.content %></p>
+<%= form_with(model: @bishlog, local: true) do |form| %>
+  <h1>Bishlog確認画面</h1>
+  <p id="detailuser" >ユーザー名: <%= @bishlog.user %></p>
+  <p id="detailcontent" >内容: <%= @bishlog.content %></p>
+  <div class="indexback">
+    <%= link_to "ブログ一覧画面にもどる", bishlogs_path %>
+  </div>
+<% end %>
 <footer class="footer">
   <p>Copyright © 2020 SASAKI All RIGHTS RESERVED.</p>
 </footer>
