@@ -1,0 +1,11 @@
+<h3 class="confirmcomment">以下の内容で、送信する。</h3>
+<%= form_with(model: @bishlog, local: true) do |form| %>
+  <%= form.hidden_field :user %>
+  <%= form.hidden_field :content %>
+  <p class="confirmuser">ユーザー名:<%= @bishlog.user %></p>
+  <p class="confirmcontent">内容:<%= @bishlog.content %></p>
+  <div class="confirmsubmit">
+      <%= form.submit  "登録する" %>
+  </div>
+  
+<% end %>
