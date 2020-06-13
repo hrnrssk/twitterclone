@@ -9,6 +9,9 @@ class BishlogsController < ApplicationController
     Bishlog.create(bishlog_params)
     redirect_to new_bishlog_path
   end
+  def show
+    @bishlog = Bishlog.find(params[:id])
+  end
   private
   def bishlog_params
     params.require(:bishlog).permit(:user, :content)

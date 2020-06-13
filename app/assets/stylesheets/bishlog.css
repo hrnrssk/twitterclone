@@ -77,6 +77,22 @@ h1 {
   left: 625px;
 }
 
+#detailuser {
+  color: white;
+  position: relative;
+  top: 100px;
+  left: 550px;
+  font-size: 1.5rem;
+}
+
+#detailcontent {
+  color: white;
+  position: relative;
+  top: 100px;
+  left: 550px;
+  font-size: 1.5rem;
+}
+
 .footer{
   background-color: black;
   height: 50px;

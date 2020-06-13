@@ -6,5 +6,3 @@ module Twclone
     config.load_defaults 5.2
   end
 end
-config.time_zone = 'Tokyo'
-config.active_record.default_timezone = :local
