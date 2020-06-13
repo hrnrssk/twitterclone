@@ -35,6 +35,7 @@ class BishlogsController < ApplicationController
   end
   def confirm
     @bishlog = Bishlog.new(bishlog_params)
+    render :new if @bishlog.invalid?
   end
   private
   def bishlog_params
