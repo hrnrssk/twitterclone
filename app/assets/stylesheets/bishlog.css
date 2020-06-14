@@ -50,19 +50,6 @@ h1 {
   left: 570px;
 }
 
-.namae {
-  color: white;
-  position: absolute;
-  top: 160px;
-  left: 620px;
-}
-
-.name {
-  position: absolute;
-  top: 185px;
-  left: 570px;
-}
-
 .naiyou {
   color: white;
   position: absolute;
@@ -96,14 +83,6 @@ h1 {
   left: 625px;
 }
 
-#detailuser {
-  color: white;
-  position: relative;
-  top: 100px;
-  left: 550px;
-  font-size: 1.5rem;
-}
-
 #detailcontent {
   color: white;
   position: relative;
@@ -124,14 +103,6 @@ h1 {
   color: white;
   position: absolute;
   top: 100px;
-  left: 550px;
-  font-size: 1.5rem;
-}
-
-.confirmuser {
-  color: white;
-  position: absolute;
-  top: 150px;
   left: 550px;
   font-size: 1.5rem;
 }

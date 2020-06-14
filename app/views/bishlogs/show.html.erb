@@ -8,7 +8,6 @@
 </header>
 <%= form_with(model: @bishlog, local: true) do |form| %>
   <h1>Bishlog確認画面</h1>
-  <p id="detailuser" >ユーザー名: <%= @bishlog.user %></p>
   <p id="detailcontent" >内容: <%= @bishlog.content %></p>
   <div class="indexback">
     <%= link_to "ブログ一覧画面にもどる", bishlogs_path %>

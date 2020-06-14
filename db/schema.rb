@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_13_021733) do
+ActiveRecord::Schema.define(version: 2020_06_14_063139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bishlogs", force: :cascade do |t|
-    t.string "user"
     t.text "content"
   end
 
