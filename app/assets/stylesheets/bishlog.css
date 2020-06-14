@@ -158,6 +158,15 @@ h1 {
   left: 580px;
 }
 
+.wellcome {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 300px;
+  left: 430px;
+  font-size: 3rem;
+}
+
 .footer{
   background-color: black;
   height: 50px;
